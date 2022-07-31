@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "blogchange_banket_backend": {
+      "main": "src/blogchange_banket_backend/main.mo",
+      "type": "motoko"
+    },
+    "blogchange_banket_frontend": {
+      "dependencies": [
+        "blogchange_banket_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/blogchange_banket_frontend/src/index.html"
+      },
+      "source": [
+        "src/blogchange_banket_frontend/assets",
+        "dist/blogchange_banket_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
